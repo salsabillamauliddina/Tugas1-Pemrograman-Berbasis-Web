@@ -10,11 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/salsabillamauliddina/Tugas1-Pemrograman-Berbasis-Web.git"
   },
+  "type": "module",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
   }
 }

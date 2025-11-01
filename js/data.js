@@ -1,4 +1,7 @@
-let dataPengguna = [
+import { getBasePath } from "./config.js";
+const basePath = getBasePath();
+
+const dataPengguna = [
   {
     id: 1,
     nama: "Rina Wulandari",
@@ -41,7 +44,7 @@ let dataPengguna = [
   }
 ];
 
-let dataBahanAjar = [
+const dataBahanAjar = [
   {
     kodeLokasi: "0TMP01",
     kodeBarang: "ASIP4301",
@@ -49,7 +52,7 @@ let dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "2",
     stok: 548,
-    cover: "img/pengantar_komunikasi.jpg"
+    cover: basePath + "pengantar_komunikasi.jpg"
   },
   {
     kodeLokasi: "0JKT01",
@@ -58,7 +61,7 @@ let dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "3",
     stok: 392,
-    cover: "img/manajemen_keuangan.jpg"
+    cover: basePath + "manajemen_keuangan.jpg"
   },
   {
     kodeLokasi: "0SBY02",
@@ -67,7 +70,7 @@ let dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "1",
     stok: 278,
-    cover: "img/kepemimpinan.jpg"
+    cover: basePath + "kepemimpinan.jpg"
   },
   {
     kodeLokasi: "0MLG01",
@@ -76,7 +79,7 @@ let dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "2",
     stok: 165,
-    cover: "img/mikrobiologi.jpg"
+    cover: basePath + "mikrobiologi.jpg"
   },
   {
     kodeLokasi: "0UPBJJBDG",
@@ -85,11 +88,11 @@ let dataBahanAjar = [
     jenisBarang: "BMP",
     edisi: "4",
     stok: 204,
-    cover: "img/paud_perkembangan.jpg"
+    cover: basePath + "paud_perkembangan.jpg"
   }
 ];
 
-let dataTracking = {
+const dataTracking = {
   "2023001234": {
     nomorDO: "2023001234",
     nama: "Rina Wulandari",
@@ -98,7 +101,7 @@ let dataTracking = {
     tanggalKirim: "2025-08-25",
     paket: "0JKT01",
     total: "Rp 180.000",
-    perjalanan:[
+    perjalanan: [
       {
         waktu: "2025-08-25 10:12:20",
         keterangan: "Penerimaan di Loket: TANGERANG SELATAN. Pengirim: Universitas Terbuka"
@@ -106,22 +109,22 @@ let dataTracking = {
       {
         waktu: "2025-08-25 14:07:56",
         keterangan: "Tiba di Hub: TANGERANG SELATAN"
-      },      
+      },
       {
         waktu: "2025-08-25 10:12:20",
         keterangan: "Diteruskan ke Kantor Jakarta Selatan"
-      },
+      }
     ]
   },
   "2023005678": {
-    nomorDO: "2023001234",
+    nomorDO: "2023005678",
     nama: "Agus Pranoto",
     status: "Dikirim",
     ekspedisi: "Pos Indonesia",
     tanggalKirim: "2025-08-25",
     paket: "0UPBJJBDG",
     total: "Rp 220.000",
-    perjalanan:[
+    perjalanan: [
       {
         waktu: "2025-08-25 10:12:20",
         keterangan: "Penerimaan di Loket: TANGERANG SELATAN. Pengirim: Universitas Terbuka"
@@ -129,7 +132,7 @@ let dataTracking = {
       {
         waktu: "2025-08-25 14:07:56",
         keterangan: "Tiba di Hub: TANGERANG SELATAN"
-      },      
+      },
       {
         waktu: "2025-08-25 16:30:10",
         keterangan: "Diteruskan ke Kantor Kota Bandung"
@@ -149,3 +152,5 @@ let dataTracking = {
     ]
   }
 };
+
+export { dataPengguna, dataBahanAjar, dataTracking };

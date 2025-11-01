@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard SITTA</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#">SITTA</a>
+      <div class="d-flex align-items-center">
+        <span id="welcomeName" class="me-3 text-dark fw-semibold"></span>
+        <button id="logoutBtn" class="btn btn-outline-danger btn-sm">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <div class="text-center">
+      <h2 class="fw-bold mb-3">Selamat Datang di Dashboard SITTA</h2>
+      <p class="text-secondary">Hai <span id="userNama" class="fw-bold text-primary"></span> 👋, kamu berhasil login!</p>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4 text-center dashboard-card">
+          <h5 class="fw-bold">Profil Pengguna</h5>
+          <p class="mb-1">Nama: <span id="namaUserCard"></span></p>
+          <p class="mb-1">Email: <span id="emailUserCard"></span></p>
+          <p>Role: <span id="roleUserCard"></span></p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mt-3 mt-md-0">
+        <div class="card shadow-sm p-4 text-center dashboard-card">
+          <h5 class="fw-bold">Akses Modul</h5>
+          <p>Klik di bawah untuk menuju bahan ajar.</p>
+          <button class="btn btn-primary">📚 Lihat Modul</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Dashboard JS -->
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
