@@ -7,3 +7,9 @@ NIM : 044731271
 ```
 git clone <repo>
 ```
+
+## run 
+```
+npx serve 
+```
+
