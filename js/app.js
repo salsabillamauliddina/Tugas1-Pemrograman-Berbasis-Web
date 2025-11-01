@@ -4,11 +4,11 @@ const tbody = document.querySelector("#tabelStok tbody");
 const btnTambah = document.getElementById("btnTambah");
 const btnRefresh = document.getElementById("btnRefresh");
 
-// 🔹 Tampilkan data di tabel
+//  Tampilkan data di tabel
 const tampilkanData = () => {
   tbody.innerHTML = "";
   dataBahanAjar.forEach((data) => {
-    console.log("🖼️ Cek path cover:", data.cover);
+    console.log("<<< ini cek path cover:", data.cover);
 
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -31,14 +31,14 @@ const tampilkanData = () => {
 // Jalankan saat load
 tampilkanData();
 
-// 🔹 Tambah data baru
+// Tambah data baru 
 btnTambah.addEventListener("click", () => {
-  const namaBarang = prompt("Masukkan nama barang:");
-  if (!namaBarang) return alert("Nama tidak boleh kosong!");
+  const namaBarang = prompt("Input item name:");
+  if (!namaBarang) return alert("Name can't empty!");
 
-  const kodeBarang = prompt("Masukkan kode barang:");
-  const stok = prompt("Masukkan jumlah stok:");
-  const cover = prompt("Masukkan nama file cover (contoh: manajemen_keuangan.jpg):");
+  const kodeBarang = prompt("Input item code:");
+  const stok = prompt("Input stock quantity:");
+  const cover = prompt("Input file cover / url  (ex: manajemen_keuangan.jpg):");
 
   dataBahanAjar.push({
     kodeLokasi: "0NEW",
@@ -51,11 +51,11 @@ btnTambah.addEventListener("click", () => {
   });
 
   tampilkanData();
-  alert("✅ Data baru berhasil ditambahkan!");
+  alert("✅ New book successfully added!");
 });
 
-// 🔹 Refresh data
+// Refresh data -> belum bisa ditambahkan secara permanen karena belum ada db 
 btnRefresh.addEventListener("click", () => {
   tampilkanData();
-  alert("🔄 Data diperbarui!");
+  alert("🔄 Data updated!");
 });

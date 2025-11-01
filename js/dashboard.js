@@ -1,20 +1,10 @@
-// Cek data user login dari localStorage
-const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
+// untuk greeting pada saat berhasil login
+const greetingEl = document.getElementById("greeting");
+const hour = new Date().getHours();
 
-if (!loggedUser) {
-  // Kalau belum login, kembali ke login page
-  window.location.href = "index.html";
-}
+let greet = "Good Night 🌙";
+if (hour < 12) greet = "Good Morning 🌞";
+else if (hour < 18) greet = "Good Afternoon ☀️";
+else greet = "Good Afternoon 🌇";
 
-// Tampilkan data user
-document.getElementById("welcomeName").textContent = loggedUser.nama;
-document.getElementById("userNama").textContent = loggedUser.nama;
-document.getElementById("namaUserCard").textContent = loggedUser.nama;
-document.getElementById("emailUserCard").textContent = loggedUser.email;
-document.getElementById("roleUserCard").textContent = loggedUser.role;
-
-// Tombol logout
-document.getElementById("logoutBtn").addEventListener("click", () => {
-  localStorage.removeItem("loggedUser");
-  window.location.href = "index.html";
-});
+greetingEl.textContent = `${greet}, welcome to SITTA UT!`;

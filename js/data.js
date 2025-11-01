@@ -1,3 +1,4 @@
+// import dari config untuk track base path 
 import { getBasePath } from "./config.js";
 const basePath = getBasePath();
 

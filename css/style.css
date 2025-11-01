@@ -1,25 +1,33 @@
 body {
+  font-family: "Google Sans Code", monospace !important;
+}
+
+body {
   background: linear-gradient(135deg, #e3f2fd, #fce4ec);
-  font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
 
 .form-card {
-  width: 360px;
-  border-radius: 15px;
+  width: 400px;
+  border-radius: 20px;
   animation: fadeIn 0.8s ease-in-out;
 }
 
+.text-black {
+  color: black !important;
+}
+
 .btn-primary {
-  background: #42a5f5;
+  background: #e3d2e9;
   border: none;
   border-radius: 12px;
   font-weight: 500;
   transition: 0.3s;
+  color: black;
 }
 
 .btn-primary:hover {
-  background: #1e88e5;
+  background: #b9a0c3;
 }
 
 .form-control {
@@ -29,7 +37,7 @@ body {
 }
 
 .form-control:focus {
-  border-color: #42a5f5;
+  border-color: #e3d2e9;
   box-shadow: 0 0 8px rgba(66, 165, 245, 0.3);
 }
 
@@ -39,13 +47,13 @@ body {
 }
 
 .btn-link {
-  color: #42a5f5;
+  color: black;
   font-size: 0.9rem;
   transition: color 0.2s ease-in-out;
 }
 
 .btn-link:hover {
-  color: #1e88e5;
+  color: #aa8ab6;
   text-decoration: underline;
 }
 

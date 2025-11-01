@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stok Bahan Ajar UT</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script type="module" src="js/app.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informasi Stok | SITTA UT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/stock.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+</head>
+<body class="bg-light">
   <div class="container py-5">
-    <h2 class="text-center text-primary mb-4">📚 Stok Bahan Ajar UT</h2>
-
-    <div class="d-flex justify-content-between mb-3">
-      <button id="btnTambah" class="btn btn-success">➕ Tambah Data</button>
-      <button id="btnRefresh" class="btn btn-secondary">🔄 Refresh Data</button>
-    </div>
-
-    <div class="table-responsive">
-      <table id="tabelStok" class="table table-bordered table-hover align-middle">
-        <thead class="table-primary text-center">
+    <div class="card shadow p-4">
+      <h3 class="text-center">📘 Informasi Stok Bahan Ajar</h3>
+      <table class="table table-striped align-middle">
+        <thead class="table">
           <tr>
-            <th>Kode Lokasi</th>
-            <th>Kode Barang</th>
+            <th>Kode</th>
             <th>Nama Barang</th>
             <th>Jenis</th>
-            <th>Edisi</th>
             <th>Stok</th>
             <th>Cover</th>
           </tr>
         </thead>
-        <tbody class="text-center"></tbody>
+        <tbody></tbody>
       </table>
+
+      <hr>
+      <h5>Tambah Data Baru</h5>
+      <div class="row g-2">
+        <div class="col-md-3"><input id="kode" type="text" class="form-control" placeholder="Kode Barang" /></div>
+        <div class="col-md-3"><input id="nama" type="text" class="form-control" placeholder="Nama Barang" /></div>
+        <div class="col-md-3"><input id="jenis" type="text" class="form-control" placeholder="Jenis" /></div>
+        <div class="col-md-3"><input id="stok" type="number" class="form-control" placeholder="Stok" /></div>
+      </div>
+      <button id="btnTambah" class="btn mt-3">Tambah</button>
+      <a href="dashboard.html" class="btn btn-outline-secondary w-100 mt-3">← Kembali ke Dashboard</a>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./js/stok.js"></script>
 </body>
 </html>

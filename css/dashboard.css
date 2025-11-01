@@ -1,36 +1,35 @@
 body {
-  background: linear-gradient(135deg, #e3f2fd, #fce4ec);
-  font-family: "Poppins", sans-serif;
-  min-height: 100vh;
+  font-family: "Google Sans Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  border-radius: 0 0 20px 16px;
 }
 
 .navbar-brand {
-  font-size: 1.4rem;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 
-.dashboard-card {
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dashboard-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-button.btn-primary {
-  border-radius: 12px;
-  background-color: #42a5f5;
-  border: none;
+.nav-link {
   font-weight: 500;
+  margin: top 50px;
+  transition: all 0.3s ease;
 }
 
-button.btn-primary:hover {
-  background-color: #1e88e5;
+.nav-link:hover {
+  text-decoration: underline;
 }
 
-#logoutBtn {
-  border-radius: 10px;
-  font-weight: 500;
+.card {
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h3, h4 {
+  font-weight: 600;
 }
